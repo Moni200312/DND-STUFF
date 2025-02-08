@@ -1,0 +1,18 @@
+name: Become Nightwing
+automation:
+- type: spell
+  id: 2533557
+  level: null
+  dc: null
+  attackBonus: null
+  castingMod: null
+  parent: null
+- type: counter
+  counter: Become Nightwing
+  amount: '1'
+  allowOverflow: false
+  errorBehaviour: warn
+_v: 2
+proper: true
+verb: casts
+activation_type: 1
