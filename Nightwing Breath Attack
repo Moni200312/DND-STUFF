@@ -1,0 +1,15 @@
+name: Nightwing Breath
+automation:
+- type: target
+  target: each
+  effects:
+  - type: attack
+    hit:
+    - type: damage
+      damage: 5d6 [Necrotic]
+      overheal: false
+    miss: []
+    attackBonus: null
+- type: text
+  text: Astaroth Exhales a shadow like substance in a 30ft cone  Each creature that the breath hits takes 5d6 necrotic damage or half on a succesful Dexterity saving throw
+  title: Effect
