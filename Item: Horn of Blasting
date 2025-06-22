@@ -1,0 +1,50 @@
+!a import
+name: Horn of Blasting
+automation:
+  - type: target
+    target: all
+    effects:
+      - type: save
+        stat: con
+        fail:
+          - type: damage
+            damage: 5d8 [thunder]
+          - type: ieffect2
+            name: Deafened
+            duration: "11"
+        success:
+          - type: damage
+            damage: (5d8)/2 [thunder]
+        dc: "15"
+  - type: target
+    target: self
+    effects:
+      - type: roll
+        dice: d100
+        name: boom
+        displayName: Horn Recoil
+      - type: condition
+        condition: boom > 21
+        onTrue: []
+        onFalse:
+          - type: damage
+            damage: 10d6 [force]
+          - type: text
+            text: The horn is destroyed!
+  - type: text
+    text: >-
+      You can take a Magic action to blow the horn, which emits a thunderous
+      blast in a 30-foot Cone that is audible out to 600 feet. Each creature in
+      the Cone makes a DC 15 Constitution saving throw. On a failed save, a
+      creature takes 5d8 Thunder damage and has the Deafened condition for 1
+      minute. On a successful save, a creature takes half as much damage only.
+      Glass or crystal objects in the Cone that aren't being worn or carried
+      take 10d8 Thunder damage.
+
+
+      Each use of the horn's magic has a 20 percent chance of causing the horn to explode. The explosion deals 10d6 Force damage to the user and destroys the horn.
+_v: 2
+proper: false
+verb: blows onto
+activation_type: 1
+```
